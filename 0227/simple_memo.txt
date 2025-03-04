@@ -1,0 +1,1 @@
+& C:/Users/302-1/anaconda3/python.exe c:/LJH/0227/q4.py
