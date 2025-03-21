@@ -32,9 +32,9 @@ def load_data():
 """
 def SVM(train_X, test_X, train_y, test_y):
     
-    svm = SVC(kernel='linear')
-    svm.fit(train_X, train_y)
-    pred_y = svm.predict(test_X)
+    model = SVC()
+    model.fit(train_X, train_y)
+    pred_y = model.predict(test_X)
     
     return pred_y
 
