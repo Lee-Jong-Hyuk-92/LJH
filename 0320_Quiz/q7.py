@@ -60,7 +60,7 @@ def plot_confusion_matrix(cm, y_true, y_pred, classes, normalize=False, cmap=plt
                     color="white" if cm[i, j] > thresh else "black")
     fig.tight_layout()
     
-    plt.savefig('confusion matrix.png')
+    plt.savefig('Normalize_confusion matrix.png')
 
 """
 1. 혼동 행렬을 계산하고, 

@@ -15,7 +15,7 @@ def load_data():
     
     print("데이터 확인해보기 :\n", X[:1])
     
-    train_X, test_X, train_y, test_y = train_test_split(X,y,test_size=0.2,random_state=0)
+    train_X, test_X, train_y, test_y = train_test_split(X, y, test_size=0.2, random_state=0)
     
     return train_X, test_X, train_y, test_y
     
