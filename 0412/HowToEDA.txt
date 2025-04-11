@@ -1,0 +1,53 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+d = pd.read_csv('ADMISSIONS.csv')
+d.head(5)
+d.info()
+d.describe()
+d.nunique()
+d.isnull().sum()
+
+# X 범주, Y 범주 sns.countplot()
+sns.countplot(x='feature', hue='target', data=df)
+plt.title('Feature vs Target')
+plt.show()
+
+# X 범주, Y 연속 sns.boxplot(), sns.barplot()
+sns.boxplot(x='feature', y='target', data=df)
+plt.title('Target Distribution by Feature')
+plt.show()
+
+sns.barplot(x='feature', y='target', data=df, estimator=np.mean)
+plt.title('Average Target by Feature')
+plt.show()
+
+# X 연속, Y 범주 sns.hostplot(), sns.violinplot()
+sns.histplot(data=df, x='feature', hue='target', kde=True, element='step', stat='density', common_norm=False)
+plt.title('Feature Distribution by Target')
+plt.show()
+
+sns.violinplot(x='target', y='feature', data=df)
+plt.title('Feature Distribution by Target Class')
+plt.show()
+
+# X 연속, Y 연속 sns.scatterplot(), sns.regplot()
+sns.scatterplot(x='feature', y='target', data=df)
+plt.title('Feature vs Target')
+plt.show()
+
+sns.regplot(x='feature', y='target', data=df)
+plt.title('Regression Line: Feature vs Target')
+plt.show()
+
+# Feature 자체 비율
+# 범주형 sns.countplot()
+sns.countplot(x='feature', data=df)
+plt.title('Feature Distribution')
+plt.show()
+
+# 연속형 sns.histplot()
+sns.histplot(df['feature'], bins=30, kde=True)
+plt.title('Feature Histogram')
+plt.show()
